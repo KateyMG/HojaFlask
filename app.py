@@ -8,8 +8,9 @@ app = Flask(__name__)
 
 developer = os.getenv("DEVELOPER", "Katherine Mazariegos")
 environment=os.getenv("ENVIRONMENT","development")
-config=yaml.load(open('info.yml')) 
-print(config['Nombre'])
+
+data=yaml.load(open('info.yml')) 
+#print(data['Nombre'])
 
 @app.route("/demo")
 def demo():
@@ -17,7 +18,7 @@ def demo():
 
 @app.route("/info")
 def api_students():
-    return render_template("info.html", config=config)
+    return render_template("info.html", data=data)
    
 @app.route("/formacion")
 def formacion():

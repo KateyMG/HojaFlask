@@ -1,0 +1,29 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+<div class="jumbotron text-center">
+    <h1 class="display-3">Información Personal</h1>
+</div>
+<div class="list">
+        <ul align = "text-center">
+
+                <li>Nombre: {{data['Nombre']}}</li> 
+                <li>Edad: {{data['Edad']}}</li> 
+                <li>Estado Civil: {{data['Estado Civil']}}</li> 
+                <li>Correo Electronico: {{data['Correo electronico']}}</li> 
+                <li>Direccion: {{data['Direccion']}}</li> 
+                <li>Nacionalidad: {{data['Nacionalidad']}}</li>
+                <li>About: {{data['About1']}}</li>
+                <li>About: {{data['About2']}}</li>
+                
+                
+             </ul>
+
+</div>
+
+
+
+
+
+{% endblock %}
